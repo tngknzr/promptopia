@@ -21,14 +21,14 @@ const Form = ({type, post, setPost, submitting, handleSubmit
               Tag {' '}
               <span className='font-normal' >(#product, #webdevelopment #idea)</span>
               </span>
-              <textarea className='form_textarea' required placeholder='Write your prompt here...' value={post.prompt} onChange={(e) =>({...post, prompt: e.target.value})}></textarea>
+              <textarea className='form_textarea' required placeholder='Write your prompt here...' value={post.prompt} onChange={(e) =>setPost({...post, prompt: e.target.value})}></textarea>
           </label>
 
           <label >
             <span className='font- satoshi font-semibold text-base text-gray-700'>
               Your AI prompt
               </span>
-              <input className='form_input' required placeholder='#Tag' value={post.tag} onChange={(e) =>({...post, tag: e.target.value})}></input>
+              <input className='form_input' required placeholder='#Tag' value={post.tag} onChange={(e) =>setPost({...post, tag: e.target.value})}></input>
           </label>
 
           <div className='flex-end mx-3 mb-5 gap-4'> 
